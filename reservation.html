@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flavors & Feast - Reservations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Flavors_and_Feast_logo.jpg" type="image/x-icon">
+</head>
+<body class="bg-gray-100">
+    
+    <!-- Header Section -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img src="logo..jpeg" alt="Flavors & Feast Logo" class="w-10 h-10 p-2 bg-transparent rounded-full">
+                <span class="ml-3 text-xl text-red-700 font-bold">Flavors & Feast</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-red-600" href="index.html">Home</a>
+                <a class="mr-5 hover:text-red-600" href="menu.html">Menu</a>
+                <a class="mr-5 hover:text-red-600" href="reservation.html">Reservations</a>
+                <a class="mr-5 hover:text-red-600" href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Reservation Form Section -->
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto py-24 px-5">
+            <div class="w-full md:w-2/3 mx-auto bg-white p-8 shadow-md rounded-lg">
+                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Make a Reservation</h2>
+                <p class="leading-relaxed mb-5 text-gray-600">Book a table at Flavors & Feast for a delightful dining experience.</p>
+                
+                <form action="submit_reservation.php" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="leading-7 text-sm text-gray-600">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="leading-7 text-sm text-gray-600">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="date" class="leading-7 text-sm text-gray-600">Reservation Date</label>
+                        <input type="date" id="date" name="date" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="time" class="leading-7 text-sm text-gray-600">Reservation Time</label>
+                        <input type="time" id="time" name="time" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="guests" class="leading-7 text-sm text-gray-600">Number of Guests</label>
+                        <input type="number" id="guests" name="guests" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" min="1" max="20" required>
+                    </div>
+                    <button type="submit" class="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg"><a href="submit.html">Submit Reservation</a></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-icon="https://www.bing.com/th/id/OIG4.VNj84h4ha8kGeD3p4E0A?pid=ImgGn"
+  intent="WELCOME"
+  chat-title="Flavors-Feast"
+  agent-id="83b29662-2290-4072-8c1b-c309ea7b012d"
+  language-code="en"
+></df-messenger>
+
+<style>
+  /* Change the chat background color */
+  df-messenger {
+    --df-messenger-bot-message: #EF4444; /* Bot message background color */
+    --df-messenger-user-message: #111827; /* User message background color */
+    --df-messenger-font-color: white;     /* Font color */
+  }
+
+  /* Customize the chat icon */
+  df-messenger .df-messenger-chat-icon {
+    background-color: #111827 !important; /* Icon background color */
+  }
+
+</style>
+
+
+</body>
+</html>

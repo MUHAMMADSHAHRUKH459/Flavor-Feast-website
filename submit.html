@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flavors & Feast - Reservation Confirmed</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Flavors_and_Feast_logo.jpg" type="image/x-icon">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    
+    <!-- Confirmation Section -->
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto py-24 px-5">
+            <div class="w-full md:w-2/3 mx-auto bg-white p-8 shadow-md rounded-lg text-center">
+                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Thank You!</h2>
+                <p class="leading-relaxed mb-5 text-gray-600">Your reservation has been successfully made. We look forward to serving you at Flavors & Feast!</p>
+                <a href="index.html" class="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Return to Home</a>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-icon="https://www.bing.com/th/id/OIG4.VNj84h4ha8kGeD3p4E0A?pid=ImgGn"
+  intent="WELCOME"
+  chat-title="Flavors-Feast"
+  agent-id="83b29662-2290-4072-8c1b-c309ea7b012d"
+  language-code="en"
+></df-messenger>
+
+<style>
+  /* Change the chat background color */
+  df-messenger {
+    --df-messenger-bot-message: #EF4444; /* Bot message background color */
+    --df-messenger-user-message: #111827; /* User message background color */
+    --df-messenger-font-color: white;     /* Font color */
+  }
+
+  /* Customize the chat icon */
+  df-messenger .df-messenger-chat-icon {
+    background-color: #111827 !important; /* Icon background color */
+  }
+
+</style>
+
+</script>
+</body>
+</html>
